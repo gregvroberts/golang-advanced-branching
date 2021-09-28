@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"strings"
 )
 
 // Values array for the feedback.json file
@@ -105,7 +106,9 @@ func generateRating() {
 		var vehResult feedbackResult
 		var vehRating rating
 		for _, msg := range v.Feedback {
+			if text := strings.Split(msg, " "); len(text) >= 5 {
 
+			}
 		}
 
 	}
